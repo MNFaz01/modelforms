@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if form %}
+    <table>
+      <thead>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>name</th>
+        <th>assignedTo</th>
+        <th>priority</th>
+      </thead>
+
+      {% for i in form %}
+        <tr>
+          <td>{{i.startDate}}</td>
+          <td>{{i.endDate}}</td>
+          <td>{{i.name}}</td>
+          <td>{{i.assignedTo}}</td>
+          <td>{{i.priority}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    {%else%}
+    <p>No Records Found</p>
+    {% endif %}
+  </body>
+</html>
